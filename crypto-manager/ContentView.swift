@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = CoinViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            Group {
+                if self.viewModel.coins.isEmpty {
+                    ProgressView("Loading...")
+                        .onAppear {
+                            self.viewModel.fetchCoins()
+                        }
+                } else {
+                    List(self.viewModel.coins, id: \.id) { coin in
+                        VStack(alignment: .leading) {
+                            Text(coin.name)
+                                .font(.headline)
+                            Text(coin.symbol)
+                                .font(.subheadline)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Crypto Manager")
         }
-        .padding()
     }
 }
 

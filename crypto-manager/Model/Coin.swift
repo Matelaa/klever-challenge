@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Coin: Codable {
+    let id: String
+    let symbol: String
+    let name: String
+}

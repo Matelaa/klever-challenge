@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+class CoinViewModel: ObservableObject {
+    private let service = CoinService()
+    
+    @Published var coins: [Coin] = []
+    
+    func fetchCoins() {
+        self.service.getCoins { coins in
+            DispatchQueue.main.async {
+                self.coins = coins
+            }
+        }
+    }
+}

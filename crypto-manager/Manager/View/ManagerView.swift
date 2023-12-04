@@ -10,12 +10,23 @@ import SwiftUI
 struct ManagerView: View {
     @StateObject private var viewModel = CoinViewModel()
     
-    let teste: [Coin] = [Coin(id: "bitcoin", symbol: "btc", name: "Bitcoin", image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400", currentPrice: 39581, priceChangePercentage: 1.91009)]
+    let teste: [Coin] = [Coin(id: "bitcoin",
+                              symbol: "btc",
+                              name: "Bitcoin",
+                              image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400",
+                              currentPrice: 39581,
+                              priceChangePercentage: 1.91009),
+                         
+                         Coin(id: "bitcoin",
+                              symbol: "btc",
+                              name: "Bitcoin",
+                              image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400",
+                              currentPrice: 39581,
+                              priceChangePercentage: 1.91009)]
     
     var body: some View {
         NavigationView {
             List {
-                // Section para lidar com a lista vazia
                 if self.teste.isEmpty {
                     VStack {
                         Spacer()
@@ -26,7 +37,6 @@ struct ManagerView: View {
                         Spacer()
                     }
                 } else {
-                    // Section para mostrar a lista de moedas
                     ForEach(self.teste) { coin in
                         ManagerCointListRow(coin: coin)
                     }

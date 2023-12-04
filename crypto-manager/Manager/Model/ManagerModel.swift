@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Manager: Codable, Equatable, Identifiable {
+    let id: UUID
+    let coin: Coin
+}

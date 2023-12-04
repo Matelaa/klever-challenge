@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CoinsView.swift
 //  crypto-manager
 //
 //  Created by Matela on 30/11/23.
@@ -12,20 +12,20 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Group {
+            VStack {
                 if self.viewModel.coins.isEmpty {
                     ProgressView("Loading...")
                         .onAppear {
                             self.viewModel.fetchCoins()
                         }
                 } else {
-                    List(self.viewModel.coins, id: \.id) { coin in
-                        VStack(alignment: .leading) {
-                            Text(coin.name)
-                                .font(.headline)
-                            Text(coin.symbol)
-                                .font(.subheadline)
-                        }
+                    List(self.viewModel.coins) { coin in
+                        CoinRow(coin: coin)
+                            .onAppear {
+                                if self.viewModel.checkIsLast(coin: coin) {
+                                    self.viewModel.fetchCoins()
+                                }
+                            }
                     }
                 }
             }

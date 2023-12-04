@@ -18,6 +18,7 @@ struct CoinRow: View {
                     .frame(width: 50, height: 50)
             } placeholder: {
                 ProgressView()
+                    .frame(width: 50, height: 50)
             }
             VStack(alignment: .leading, spacing: 5) {
                 Text(coin.name)

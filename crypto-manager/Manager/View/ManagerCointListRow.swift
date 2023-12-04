@@ -12,16 +12,15 @@ struct ManagerCointListRow: View {
     
     var body: some View {
         HStack {
-            // Imagem à esquerda
             AsyncImage(url: URL(string: coin.image)) { image in
                 image.resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 50, height: 50)
             } placeholder: {
                 ProgressView()
+                    .frame(width: 50, height: 50)
             }
             
-            // Informações da moeda
             VStack(alignment: .leading) {
                 Text(coin.name)
                     .font(.headline)
@@ -29,14 +28,12 @@ struct ManagerCointListRow: View {
                     .font(.subheadline)
             }
             
-            Spacer() // Espaço para empurrar a imagem verde para a direita
+            Spacer()
             
-            // Imagem verde à direita
-            Image(systemName: "circle.fill")
-                .foregroundColor(.green)
+            Circle()
                 .frame(width: 20, height: 20)
+                .foregroundColor(.green)
         }
-        .padding(.vertical, 8)
     }
 }
 

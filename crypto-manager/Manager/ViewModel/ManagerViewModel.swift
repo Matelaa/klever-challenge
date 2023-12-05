@@ -12,7 +12,7 @@ class ManagerViewModel: ObservableObject {
     @Published var alreadyManagedCoin: Bool = false
     
     func addCoinManagement(coin: Coin, importance: Importance) {
-        if RealmSingleton.shared.get().contains(where: { $0.id == coin.id }) {
+        if RealmSingleton.shared.get().contains(where: { $0.coin?.id == coin.id }) {
             self.alreadyManagedCoin = true
             return
         }
@@ -32,7 +32,7 @@ class ManagerViewModel: ObservableObject {
     func deleteManagedCoin(managedCoin: Manager) {
         self.managedCoins = RealmSingleton.shared.delete(managedCoin: managedCoin)
     }
-    func updateManagedCoin() {
-        
+    func updateManagedCoin(managedCoin: Manager, importance: Importance) {
+        self.managedCoins = RealmSingleton.shared.update(managedCoin: managedCoin, importance: importance)
     }
 }

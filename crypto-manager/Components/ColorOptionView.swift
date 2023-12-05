@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct ColorOptionView: View {
+    let color: Color
+    let text: String
+    let isSelected: Bool
+    let onTap: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Circle()
+                .fill(self.color)
+                .frame(width: 60, height: 60)
+                .overlay(
+                    Circle()
+                        .stroke(.cyan, lineWidth: self.isSelected ? 3 : 0)
+                )
+                .onTapGesture {
+                    self.onTap()
+                }
+            
+            Text(self.text)
+                .font(.caption)
+                .foregroundColor(.primary)
+        }
     }
 }
 
-#Preview {
-    ColorOptionView()
-}
+//#Preview {
+//    ColorOptionView()
+//}

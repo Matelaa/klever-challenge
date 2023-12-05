@@ -39,7 +39,6 @@ struct ManagerCoinListRow: View {
     }
     
     func circleColor(for importance: Manager.Importance) -> Color {
-        print(importance)
         switch importance {
         case .high:
             return .green

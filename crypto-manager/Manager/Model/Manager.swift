@@ -11,7 +11,7 @@ struct Manager: Identifiable {
     var id: String
     var coin: Coin?
     var importance: Importance = .low
-    
+
     enum Importance: Int {
         case high = 2
         case medium = 1

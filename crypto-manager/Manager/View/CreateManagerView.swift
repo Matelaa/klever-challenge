@@ -117,33 +117,6 @@ struct CreateManagerView: View {
     }
 }
 
-
-struct ColorOptionView: View {
-    let color: Color
-    let text: String
-    let isSelected: Bool
-    let onTap: () -> Void
-    
-    var body: some View {
-        VStack {
-            Circle()
-                .fill(color)
-                .frame(width: 60, height: 60)
-                .overlay(
-                    Circle()
-                        .stroke(Color.white, lineWidth: isSelected ? 3 : 0)
-                )
-                .onTapGesture {
-                    onTap()
-                }
-            
-            Text(text)
-                .font(.caption)
-                .foregroundColor(.primary)
-        }
-    }
-}
-
 //#Preview {
 //    CreateManagerView()
 //}

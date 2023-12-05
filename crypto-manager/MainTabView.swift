@@ -15,7 +15,7 @@ struct MainTabView: View {
                     Label("Manager", systemImage: "list.bullet")
                 }
             
-            ContentView()
+            CoinsView()
                 .tabItem {
                     Label("Coins", systemImage: "dollarsign.circle")
                 }

@@ -35,7 +35,6 @@ class RealmSingleton {
             
             let sortedResults = results.sorted { $0.importance.rawValue > $1.importance.rawValue }
             
-            //MARK: - TODO: Remover esses forces
             let managedCointsObjectToModel = sortedResults.compactMap { managerObject in
                 if let coinObject = managerObject.coin,
                    let importance = Manager.Importance(rawValue: managerObject.importance.rawValue) {

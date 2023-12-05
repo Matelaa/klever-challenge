@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		F21F7F6A2B1B79D600E894E3 /* ConfigInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F21F7F692B1B79D600E894E3 /* ConfigInfo.xcprivacy */; };
 		F21F7F6C2B1B7A5000E894E3 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F7F6B2B1B7A5000E894E3 /* AppConfig.swift */; };
-		F243397F2B1CF99B00C4D4B5 /* ManagerCointListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F243397E2B1CF99B00C4D4B5 /* ManagerCointListRow.swift */; };
+		F231BD952B1E373200629E77 /* CoinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231BD942B1E373200629E77 /* CoinDetailView.swift */; };
+		F231BD972B1E405700629E77 /* CreateManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231BD962B1E405700629E77 /* CreateManagerView.swift */; };
+		F243397F2B1CF99B00C4D4B5 /* ManagerCoinListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F243397E2B1CF99B00C4D4B5 /* ManagerCoinListRow.swift */; };
 		F24339812B1D018600C4D4B5 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24339802B1D018600C4D4B5 /* MainTabView.swift */; };
-		F24339882B1D02E400C4D4B5 /* ManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24339872B1D02E400C4D4B5 /* ManagerModel.swift */; };
+		F24339882B1D02E400C4D4B5 /* ManagerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24339872B1D02E400C4D4B5 /* ManagerObject.swift */; };
 		F29344842B1B99E700A9BABB /* CoinListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29344832B1B99E700A9BABB /* CoinListRow.swift */; };
 		F29344862B1B9B3000A9BABB /* ManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29344852B1B9B3000A9BABB /* ManagerView.swift */; };
 		F2B92FB92B1926320015E7C7 /* crypto_managerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B92FB82B1926320015E7C7 /* crypto_managerApp.swift */; };
@@ -21,14 +23,22 @@
 		F2B92FCB2B19278C0015E7C7 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B92FCA2B19278C0015E7C7 /* Coin.swift */; };
 		F2B92FCD2B1927D00015E7C7 /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B92FCC2B1927D00015E7C7 /* CoinService.swift */; };
 		F2B92FCF2B192D830015E7C7 /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B92FCE2B192D830015E7C7 /* CoinViewModel.swift */; };
+		F2DD69542B1E58F500324291 /* ManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DD69532B1E58F500324291 /* ManagerViewModel.swift */; };
+		F2DD69572B1E693500324291 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = F2DD69562B1E693500324291 /* Realm */; };
+		F2DD69592B1E693500324291 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F2DD69582B1E693500324291 /* RealmSwift */; };
+		F2DD695B2B1E702A00324291 /* CoinObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DD695A2B1E702A00324291 /* CoinObject.swift */; };
+		F2FACCF12B1EC36A0025E4D7 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FACCF02B1EC36A0025E4D7 /* Manager.swift */; };
+		F2FACCF32B1EC54D0025E4D7 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FACCF22B1EC54C0025E4D7 /* RealmConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F21F7F692B1B79D600E894E3 /* ConfigInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ConfigInfo.xcprivacy; sourceTree = "<group>"; };
 		F21F7F6B2B1B7A5000E894E3 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
-		F243397E2B1CF99B00C4D4B5 /* ManagerCointListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerCointListRow.swift; sourceTree = "<group>"; };
+		F231BD942B1E373200629E77 /* CoinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailView.swift; sourceTree = "<group>"; };
+		F231BD962B1E405700629E77 /* CreateManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateManagerView.swift; sourceTree = "<group>"; };
+		F243397E2B1CF99B00C4D4B5 /* ManagerCoinListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerCoinListRow.swift; sourceTree = "<group>"; };
 		F24339802B1D018600C4D4B5 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		F24339872B1D02E400C4D4B5 /* ManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerModel.swift; sourceTree = "<group>"; };
+		F24339872B1D02E400C4D4B5 /* ManagerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerObject.swift; sourceTree = "<group>"; };
 		F29344832B1B99E700A9BABB /* CoinListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListRow.swift; sourceTree = "<group>"; };
 		F29344852B1B9B3000A9BABB /* ManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerView.swift; sourceTree = "<group>"; };
 		F2B92FB52B1926320015E7C7 /* crypto-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "crypto-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +49,10 @@
 		F2B92FCA2B19278C0015E7C7 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		F2B92FCC2B1927D00015E7C7 /* CoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinService.swift; sourceTree = "<group>"; };
 		F2B92FCE2B192D830015E7C7 /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
+		F2DD69532B1E58F500324291 /* ManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewModel.swift; sourceTree = "<group>"; };
+		F2DD695A2B1E702A00324291 /* CoinObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinObject.swift; sourceTree = "<group>"; };
+		F2FACCF02B1EC36A0025E4D7 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		F2FACCF22B1EC54C0025E4D7 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DD69592B1E693500324291 /* RealmSwift in Frameworks */,
+				F2DD69572B1E693500324291 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +73,7 @@
 			children = (
 				F21F7F692B1B79D600E894E3 /* ConfigInfo.xcprivacy */,
 				F21F7F6B2B1B7A5000E894E3 /* AppConfig.swift */,
+				F2FACCF22B1EC54C0025E4D7 /* RealmConfig.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -75,7 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				F29344852B1B9B3000A9BABB /* ManagerView.swift */,
-				F243397E2B1CF99B00C4D4B5 /* ManagerCointListRow.swift */,
+				F243397E2B1CF99B00C4D4B5 /* ManagerCoinListRow.swift */,
+				F231BD962B1E405700629E77 /* CreateManagerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -83,6 +101,7 @@
 		F24339842B1D021000C4D4B5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F2DD69532B1E58F500324291 /* ManagerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -90,7 +109,8 @@
 		F24339852B1D021700C4D4B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F24339872B1D02E400C4D4B5 /* ManagerModel.swift */,
+				F2FACCF02B1EC36A0025E4D7 /* Manager.swift */,
+				F24339872B1D02E400C4D4B5 /* ManagerObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +169,7 @@
 			children = (
 				F2B92FBA2B1926320015E7C7 /* CoinsView.swift */,
 				F29344832B1B99E700A9BABB /* CoinListRow.swift */,
+				F231BD942B1E373200629E77 /* CoinDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				F2B92FCA2B19278C0015E7C7 /* Coin.swift */,
+				F2DD695A2B1E702A00324291 /* CoinObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +215,10 @@
 			dependencies = (
 			);
 			name = "crypto-manager";
+			packageProductDependencies = (
+				F2DD69562B1E693500324291 /* Realm */,
+				F2DD69582B1E693500324291 /* RealmSwift */,
+			);
 			productName = "crypto-manager";
 			productReference = F2B92FB52B1926320015E7C7 /* crypto-manager.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +247,9 @@
 				Base,
 			);
 			mainGroup = F2B92FAC2B1926320015E7C7;
+			packageReferences = (
+				F2DD69552B1E693500324291 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = F2B92FB62B1926320015E7C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -248,15 +277,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2DD69542B1E58F500324291 /* ManagerViewModel.swift in Sources */,
 				F2B92FCF2B192D830015E7C7 /* CoinViewModel.swift in Sources */,
+				F2DD695B2B1E702A00324291 /* CoinObject.swift in Sources */,
+				F2FACCF12B1EC36A0025E4D7 /* Manager.swift in Sources */,
+				F2FACCF32B1EC54D0025E4D7 /* RealmConfig.swift in Sources */,
 				F2B92FCB2B19278C0015E7C7 /* Coin.swift in Sources */,
 				F29344862B1B9B3000A9BABB /* ManagerView.swift in Sources */,
-				F24339882B1D02E400C4D4B5 /* ManagerModel.swift in Sources */,
+				F24339882B1D02E400C4D4B5 /* ManagerObject.swift in Sources */,
 				F2B92FBB2B1926320015E7C7 /* CoinsView.swift in Sources */,
 				F21F7F6C2B1B7A5000E894E3 /* AppConfig.swift in Sources */,
+				F231BD972B1E405700629E77 /* CreateManagerView.swift in Sources */,
+				F231BD952B1E373200629E77 /* CoinDetailView.swift in Sources */,
 				F2B92FCD2B1927D00015E7C7 /* CoinService.swift in Sources */,
 				F29344842B1B99E700A9BABB /* CoinListRow.swift in Sources */,
-				F243397F2B1CF99B00C4D4B5 /* ManagerCointListRow.swift in Sources */,
+				F243397F2B1CF99B00C4D4B5 /* ManagerCoinListRow.swift in Sources */,
 				F2B92FB92B1926320015E7C7 /* crypto_managerApp.swift in Sources */,
 				F24339812B1D018600C4D4B5 /* MainTabView.swift in Sources */,
 			);
@@ -464,6 +499,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F2DD69552B1E693500324291 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F2DD69562B1E693500324291 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2DD69552B1E693500324291 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		F2DD69582B1E693500324291 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2DD69552B1E693500324291 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F2B92FAD2B1926320015E7C7 /* Project object */;
 }

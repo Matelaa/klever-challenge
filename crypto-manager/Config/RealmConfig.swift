@@ -26,7 +26,7 @@ class RealmSingleton {
     
     func save(managerObject: ManagerObject) throws {
         try realm?.write {
-            realm?.add(managerObject, update: .modified)
+            realm?.add(managerObject)
         }
     }
     
@@ -67,12 +67,22 @@ class RealmSingleton {
             }
             return self.get()
         } catch {
-            print("Error deleting objects: \(error)")
             return []
         }
     }
     
-    func update() {
-        
+    func update(managedCoin: Manager, importance: Importance) -> [Manager] {
+        if let objectIdFromString = try? ObjectId(string: managedCoin.id),
+           let managedCoinObject = realm?.object(ofType: ManagerObject.self, forPrimaryKey: objectIdFromString) {
+            do {
+                try realm?.write {
+                    managedCoinObject.importance = importance
+                }
+                return self.get()
+            } catch {
+                return []
+            }
+        }
+        return []
     }
 }

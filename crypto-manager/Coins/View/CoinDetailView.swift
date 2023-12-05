@@ -32,13 +32,13 @@ struct CoinDetailView: View {
             
             Divider()
             
-            Text("Preço Atual: $\(coin.currentPrice, specifier: "%.2f")")
+            Text("Current price: $\(coin.currentPrice, specifier: "%.2f")")
                 .font(.headline)
             
             let priceChangeColor: Color = coin.priceChangePercentage >= 0 ? .green : .red
             
             HStack {
-                Text("Variação nas últimas 24 horas: ")
+                Text("Variation in the last 24 hours: ")
                     .font(.headline)
                     .foregroundColor(.primary)
                 
@@ -51,7 +51,7 @@ struct CoinDetailView: View {
                 Text("Start managing this coin")
                     .padding()
                     .foregroundColor(.white)
-                    .background(Color.blue)
+                    .background(.cyan)
                     .cornerRadius(10)
             }
             .padding()

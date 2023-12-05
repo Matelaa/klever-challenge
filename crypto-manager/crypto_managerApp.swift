@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 @main
-struct crypto_managerApp: App {
+struct crypto_managerApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
         }
     }
 }
+    

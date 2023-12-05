@@ -2,6 +2,9 @@
 
 Bem-vindo ao Crypto Manager, o seu assistente pessoal para gerenciar e acompanhar suas criptomoedas de maneira fácil e personalizada. Com uma abordagem centrada no usuário, este aplicativo permite que você mantenha controle total sobre suas criptos, ajustando-as de acordo com sua importância.
 
+## Demo
+![crypto demo](https://github.com/Matelaa/klever-challenge/assets/37427070/958e029c-cd4b-4f85-ae75-cb2ad659dd49)
+
 ## Features
 
 * [X] CRUD completo, adicione, leia, atualize e exclua suas criptomoedas de maneira intuitiva e eficiente.

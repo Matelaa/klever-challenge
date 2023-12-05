@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CoinsView: View {
     @StateObject private var viewModel = CoinViewModel()
     
     var body: some View {

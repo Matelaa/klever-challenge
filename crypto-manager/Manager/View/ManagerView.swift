@@ -8,39 +8,39 @@
 import SwiftUI
 
 struct ManagerView: View {
-    @StateObject private var viewModel = CoinViewModel()
-    
-    let teste: [Coin] = [Coin(id: "bitcoin",
-                              symbol: "btc",
-                              name: "Bitcoin",
-                              image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400",
-                              currentPrice: 39581,
-                              priceChangePercentage: 1.91009),
-                         
-                         Coin(id: "bitcoin",
-                              symbol: "btc",
-                              name: "Bitcoin",
-                              image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400",
-                              currentPrice: 39581,
-                              priceChangePercentage: 1.91009)]
+    @StateObject private var viewModel = ManagerViewModel()
     
     var body: some View {
         NavigationView {
             List {
-                if self.teste.isEmpty {
+                if self.viewModel.managedCoins.isEmpty {
                     VStack {
                         Spacer()
-                        Text("A lista está vazia")
+                        Text("You don't have any coin added to your management.")
+                            .multilineTextAlignment(.center)
                             .foregroundColor(.gray)
-                            .frame(maxWidth: .infinity, alignment: .center)
+                            .frame(maxWidth: .infinity)
                             .padding()
                         Spacer()
                     }
                 } else {
-                    ForEach(self.teste) { coin in
-                        ManagerCointListRow(coin: coin)
+                    ForEach(self.viewModel.managedCoins) { managedCoin in
+                        //MARK: - TODO: Remover esses forces
+                        NavigationLink(destination: CoinDetailView(coin: managedCoin.coin!)) {
+                            ManagerCoinListRow(managedCoin: managedCoin)
+                                .swipeActions(allowsFullSwipe: false) {
+                                    Button(role: .destructive) {
+                                        self.viewModel.deleteManagedCoin(managedCoin: managedCoin)
+                                    } label: {
+                                        Label("Delete", systemImage: "trash.fill")
+                                    }
+                                }
+                        }
                     }
                 }
+            }
+            .onAppear() {
+                self.viewModel.getManagedCoins()
             }
             .navigationTitle("Coins")
         }

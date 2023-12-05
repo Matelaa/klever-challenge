@@ -25,16 +25,17 @@ struct ManagerView: View {
                     }
                 } else {
                     ForEach(self.viewModel.managedCoins) { managedCoin in
-                        //MARK: - TODO: Remover esses forces
-                        NavigationLink(destination: CoinDetailView(coin: managedCoin.coin!)) {
-                            ManagerCoinListRow(managedCoin: managedCoin)
-                                .swipeActions(allowsFullSwipe: false) {
-                                    Button(role: .destructive) {
-                                        self.viewModel.deleteManagedCoin(managedCoin: managedCoin)
-                                    } label: {
-                                        Label("Delete", systemImage: "trash.fill")
+                        if let coin = managedCoin.coin {
+                            NavigationLink(destination: CoinDetailView(coin: coin)) {
+                                ManagerCoinListRow(managedCoin: managedCoin)
+                                    .swipeActions(allowsFullSwipe: false) {
+                                        Button(role: .destructive) {
+                                            self.viewModel.deleteManagedCoin(managedCoin: managedCoin)
+                                        } label: {
+                                            Label("Delete", systemImage: "trash.fill")
+                                        }
                                     }
-                                }
+                            }
                         }
                     }
                 }

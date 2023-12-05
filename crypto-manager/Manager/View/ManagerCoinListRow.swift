@@ -12,21 +12,22 @@ struct ManagerCoinListRow: View {
     
     var body: some View {
         HStack {
-            //MARK: - TODO: Remover esses forces
-            AsyncImage(url: URL(string: self.managedCoin.coin!.image)) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50, height: 50)
-            } placeholder: {
-                ProgressView()
-                    .frame(width: 50, height: 50)
-            }
-            
-            VStack(alignment: .leading) {
-                Text(self.managedCoin.coin!.name)
-                    .font(.headline)
-                Text(self.managedCoin.coin!.symbol)
-                    .font(.subheadline)
+            if let coin = managedCoin.coin {
+                AsyncImage(url: URL(string: coin.image)) { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50, height: 50)
+                } placeholder: {
+                    ProgressView()
+                        .frame(width: 50, height: 50)
+                }
+                
+                VStack(alignment: .leading) {
+                    Text(coin.name)
+                        .font(.headline)
+                    Text(coin.symbol)
+                        .font(.subheadline)
+                }
             }
             
             Spacer()

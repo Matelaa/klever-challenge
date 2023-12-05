@@ -33,16 +33,21 @@ class RealmSingleton {
     func get() -> [Manager] {
         if let results = realm?.objects(ManagerObject.self) {
             
-            let sortedResults = results.sorted { (managerCoin1, managerCoin2) -> Bool in
-                return managerCoin1.importance.rawValue > managerCoin2.importance.rawValue
-            }
+            let sortedResults = results.sorted { $0.importance.rawValue > $1.importance.rawValue }
             
             //MARK: - TODO: Remover esses forces
-            let managedCoinsObjectToModel = sortedResults.map({ Manager(id: $0.id.stringValue,
-                                                                        coin: Coin(coinObject: $0.coin!),
-                                                                        importance: Manager.Importance(rawValue: $0.importance.rawValue)!) })
+            let managedCointsObjectToModel = sortedResults.compactMap { managerObject in
+                if let coinObject = managerObject.coin,
+                   let importance = Manager.Importance(rawValue: managerObject.importance.rawValue) {
+                    let coin = Coin(coinObject: coinObject)
+                    
+                    return Manager(id: managerObject.id.stringValue, coin: coin, importance: importance)
+                } else {
+                    return nil
+                }
+            }
             
-            return managedCoinsObjectToModel
+            return managedCointsObjectToModel
         }
         
         return []
